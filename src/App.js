@@ -1,16 +1,19 @@
-import './App.css';
-import {useState, useEffect} from 'react';
+import './App.css'
+import {useState} from 'react'
 import key from "./api"
+import img from "./blackpower.png"
+
 
 function App() {
   const [data, setData] = useState({
-    fact: "loading...",
-    source: "loading..."  
+    fact: "Rudy Ray Moore financed the hit 1975 blaxploitation film Dolemite with $140,000 of his own money. The film grossed $12 million and was one of the most successful movies that year.",
+    source: null  
   })
 
   const url = "https://rest.blackhistoryapi.io/fact/random"
 
-  useEffect(() => {
+    
+  function fetchData() {
     fetch(url, {
       headers: {
         "accept": "application/json",
@@ -22,22 +25,20 @@ function App() {
         source: randomFact.Results[0].source
       })))
       .catch(Error => console.log(Error))
-  }, [])
-    
-
+  }
 
   return (
     <div className="App">
       <header className='header'>
+        <img className="logo" src={img} alt="black power"/>
         <h1 className='header--title'>it.matters</h1>  
       </header>
-      <h2>informations</h2>
+      <h2>Facts From The Black History API</h2>
       <div className='main--wrapper'>
-        <h3>Get some facts</h3>
         <p>{data.fact}</p>
-        <a href={data.source}>source</a>
+        {data.source && <a href={data.source}>source</a>}
       </div>
-      <button className='getData-btn'>GET.fact</button>
+      <button className='getData-btn' onClick={fetchData}>GET.fact</button>
     </div>
   );
 }

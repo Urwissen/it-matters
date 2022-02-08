@@ -6,16 +6,28 @@
 }
 
 .header {
-  background-color: #141414;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ececec;
   box-shadow: 0 2px 2px -4px rgba(236, 236, 236, 0.6);
+  max-height: 6em;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.logo {
+  max-height: 4em;
+  margin-right: .5em;
 }
 
 .header--title {
   font-size: 2em;
   text-decoration: overline;
   text-align: left;
-  color: #e7e7e7;
-  padding: 1em;
+  color: #242424;
+  margin: 0;
 }
 
 a {
@@ -36,7 +48,6 @@ a {
 }
 
 .getData-btn {
-  
   border: none;
   padding: 0.5em 1em;
   font-size: 1em;
@@ -44,7 +55,13 @@ a {
   text-transform: uppercase;
 }
 
-.getData-btn:hover {
-  background-color: aquamarine;
+.getData-btn:hover,
+.getData-btn:focus {
+  background-color: rgb(255, 105, 94);
+}
+
+.getData-btn:active {
+  box-shadow: inset 2px 2px 3px #1d1d1d,
+            inset -2px -2px 3px #2b2b2b;  
 }
 
