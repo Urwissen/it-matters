@@ -8,6 +8,10 @@ body {
   background-color: #171717;
 }
 
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
