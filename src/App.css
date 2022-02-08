@@ -1,8 +1,11 @@
 .App {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   text-align: center;
   color: #DEEEEA;
   font-size: 20px;
+  min-height: 100vh;
 }
 
 .header {
@@ -48,6 +51,7 @@ a {
 }
 
 .getData-btn {
+  align-self: center;
   border: none;
   padding: 0.5em 1em;
   font-size: 1em;
@@ -65,3 +69,7 @@ a {
             inset -2px -2px 3px #2b2b2b;  
 }
 
+footer {
+  margin-top: auto;
+  padding: 1em;
+}

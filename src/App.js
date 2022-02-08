@@ -39,6 +39,10 @@ function App() {
         {data.source && <a href={data.source}>source</a>}
       </div>
       <button className='getData-btn' onClick={fetchData}>GET.fact</button>
+      <footer>
+        <aside>By Lars Gessner</aside>
+        <aside>Thanks to blackhistoryapi.io</aside>
+      </footer>
     </div>
   );
 }
