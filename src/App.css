@@ -40,6 +40,7 @@ a {
 
 .main--wrapper {
   margin: 0 auto;
+  font-size: 1.6rem;
   max-width: 600px;
   width: 80%;
   padding: 1em;
@@ -59,8 +60,7 @@ a {
   text-transform: uppercase;
 }
 
-.getData-btn:hover,
-.getData-btn:focus {
+.getData-btn:hover {
   background-color: rgb(255, 105, 94);
 }
 
@@ -72,4 +72,19 @@ a {
 footer {
   margin-top: auto;
   padding: 1em;
+}
+
+aside {
+  margin: 0.8em;
+}
+
+aside:hover {
+  color: greenyellow;
+  cursor: pointer;
+}
+
+.bi {
+  width: 18px;
+  height: 18px;
+  margin-left: 0.5em;
 }
